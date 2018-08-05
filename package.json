@@ -1,7 +1,7 @@
 {
-  "name": "first",
+  "name": "examples",
   "version": "0.0.1",
-  "description": "Application for learning webpack 4",
+  "description": "Application for publish my experiments",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,10 @@
     "build": "npm run build-app && npm run build-server",
     "eslint": "eslint",
     "babel-node": "babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Poletay/examples.git"
   },
   "author": "Smirnov Aleksey",
   "license": "ISC",
