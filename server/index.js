@@ -7,6 +7,7 @@ import Pug from 'koa-pug';
 import koaStatic from 'koa-static';
 import Router from 'koa-router';
 import koaMount from 'koa-mount';
+import favicon from 'koa-favicon';
 import addRoutes from './routes';
 
 const app = new Koa();
@@ -28,6 +29,7 @@ addRoutes(router);
 app
   .use(logger())
   .use(koaMount('/assets', koaStatic(staticRoot)))
+  .use(favicon(path.join(staticRoot, 'img/favicon.png')))
   .use(router.routes())
   .use(router.allowedMethods());
 
