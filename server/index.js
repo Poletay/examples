@@ -11,6 +11,10 @@ import addRoutes from './routes';
 
 const app = new Koa();
 
+const hotClientConfig = {
+  hotClient: process.env.NODE_ENV === 'development' ? {} : false,
+};
+
 const router = new Router();
 const projectRoot = __dirname;
 const staticRoot = path.join(projectRoot, 'app');
@@ -25,7 +29,7 @@ const pug = new Pug({
 
 pug.use(app);
 addRoutes(router);
-koaWebpack()
+koaWebpack(hotClientConfig)
   .then((middleware) => {
     app.use(middleware);
   });

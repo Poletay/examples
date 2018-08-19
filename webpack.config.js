@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV || 'production',
   plugins: [
     new MiniCssExtractPlugin({
       filename: './css/style.bundle.css',
