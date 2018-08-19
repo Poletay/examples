@@ -1,11 +1,13 @@
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'development',
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '../css/style.bundle.css',
+      filename: './css/style.bundle.css',
     }),
     new CopyWebpackPlugin([
       {
@@ -14,12 +16,14 @@ module.exports = {
         flatten: true,
       },
     ]),
+  //  new BundleAnalyzerPlugin(),
   ],
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
+        exclude: path.resolve(__dirname, 'node_modules/'),
         options: {
           presets: ['env', 'stage-0'],
         },
@@ -39,13 +43,14 @@ module.exports = {
   },
   entry: ['./src/index.jsx', './src/scss/style.scss'],
   output: {
-    filename: 'main.js',
-    path: `${__dirname}/dist/app/js`,
-    publicPath: '/assets/js/',
+    filename: 'js/main.js',
+    path: `${__dirname}/dist/app`,
+    publicPath: '/assets/',
   },
   performance: {
     hints: 'warning',
-    assetFilter: assetFilename => assetFilename.endsWith('.css') || assetFilename.endsWith('.js'),
+    maxEntrypointSize: 1700000,
+    maxAssetSize: 1700000,
   },
   stats: 'errors-only',
 };

@@ -4,6 +4,7 @@
   "description": "Application for publish my experiments",
   "main": "./src/index.js",
   "scripts": {
+    "nodemon": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-app": "webpack",
     "build-server": "babel server --out-dir dist --source-maps inline",
@@ -35,9 +36,10 @@
     "eslint-plugin-react": "^7.10.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.2",
+    "nodemon": "^1.18.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
-    "webpack": "^4.16.1",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
@@ -55,6 +57,7 @@
     "koa-session": "^5.8.2",
     "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
+    "koa-webpack": "^5.1.0",
     "lodash": "^4.17.10",
     "popper.js": "^1.14.4",
     "pug": "^2.0.3",
@@ -63,6 +66,7 @@
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-actions": "^2.6.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.16.5"
   }
 }
