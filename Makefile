@@ -14,6 +14,6 @@ develop:
 	rm -rf dist
 	NODE_ENV=development npm run build
 test:
-	npm test
+	npm run test
 watch-test:
 	npm run test -- --watchAll
