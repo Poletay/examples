@@ -17,7 +17,9 @@
     "url": "https://github.com/Poletay/examples.git"
   },
   "jest": {
-    "testPathIgnorePatterns": ["__fixtures__"]
+    "testPathIgnorePatterns": [
+      "__fixtures__"
+    ]
   },
   "author": "Smirnov Aleksey",
   "license": "ISC",
@@ -33,10 +35,12 @@
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "enzyme": "^3.5.0",
+    "enzyme-adapter-react-16": "^1.3.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.22.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
     "jest": "^23.5.0",
