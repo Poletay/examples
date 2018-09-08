@@ -1,8 +1,11 @@
 import React from 'react';
+import MainLogo from './MainLogo';
+import MainMenu from './MainMenu';
 
 const Header = () => (
-  <div className="row">
-    <div className="col-12">HEADER HERE!!!</div>
+  <div className="main-header">
+    <MainLogo />
+    <MainMenu />
   </div>
 );
 

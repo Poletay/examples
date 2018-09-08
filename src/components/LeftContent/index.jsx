@@ -1,8 +1,9 @@
 import React from 'react';
+import LeftMenu from './LeftMenu';
 
 const LeftContent = () => (
   <div className="left-content">
-    LEFT CONTENT BAR HERE!!!!@@@@
+    <LeftMenu />
   </div>
 );
 

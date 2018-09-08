@@ -1,0 +1,16 @@
+.main-header {
+  display: flex;
+  box-shadow: $main-shadow;
+  margin-bottom: 10px;
+  color: $main-header-text-color;
+}
+
+.main-logo {
+  background-color: $main-logo-bg-color;
+  min-width: 200px;
+}
+
+.main-menu {
+  background-color: $main-menu-bg-color;
+  flex-grow: 1;
+}

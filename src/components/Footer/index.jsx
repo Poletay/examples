@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Footer = () => (
-  <div className="row">
-    <div className="col-12">FOOTER HERE</div>
+  <div className="main-footer">
+    FOOTER HERE
   </div>
 );
 

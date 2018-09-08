@@ -1,1 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
+
+$main-header-text-color: #006633;
+$main-logo-bg-color: #33CC66;
+$main-menu-bg-color: #00CC33;
+$main-footer-bg-color: #FF6699;
+$main-footer-text-color: #990033;
+$main-shadow: 0.2em 0.2em 3px rgba(122,122,122,0.5);
+
+@import "main";
+@import "header";
+@import "left";
+@import "middle";
+@import "footer";

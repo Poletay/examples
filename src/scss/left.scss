@@ -1,0 +1,17 @@
+.left-content {
+  display: flex;
+  box-shadow: $main-shadow;
+  background-color: #66CC99;
+  margin-bottom: 10px;
+}
+
+.left-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-menu .menu-item {
+  flex-grow: 1;
+  flex-basis: 90%;
+  margin-left: 10%;
+}
