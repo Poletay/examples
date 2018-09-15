@@ -19,7 +19,7 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col-12">
-            <Middle />
+            <Middle contents={this.props.mainAppStructure} />
           </div>
         </div>
         <div className="row">

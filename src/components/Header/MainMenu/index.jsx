@@ -11,7 +11,7 @@ export default class MainMenu extends React.Component {
   makeElementsList = (elements) => {
     const elementsList = elements.map(el => (
       <li className="nav-item" key={uniqueId()}>
-        <NavLink exact to={el.path} className="nav-link" activeClassName="active" href="#">{el.name}</NavLink>
+        <NavLink exact to={el.path} className="nav-link" activeClassName="active">{el.name}</NavLink>
       </li>
     ));
     return elementsList;

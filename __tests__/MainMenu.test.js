@@ -7,25 +7,29 @@ configure({
   adapter: new Adapter(),
 });
 
+const menuItems = [
+  {
+    name: 'menuItem1',
+    path: '/',
+  },
+  {
+    name: 'menuItem2',
+    path: '/',
+  },
+  {
+    name: 'menuItem3',
+    path: '/',
+  },
+];
+
+
 describe('MainMenu components test', () => {
   it('should be selectable by class "main-menu"', () => {
-    expect(shallow(<MainMenu items={[]} />).is('.main-menu')).toBe(true);
+    expect(shallow(<MainMenu items={menuItems} />).is('.main-menu')).toBe(true);
   });
 });
 
 describe('MainMenu should take menu-items list as Array of Objects', () => {
-  const menuItems = [
-    {
-      name: 'menuItem1',
-    },
-    {
-      name: 'menuItem2',
-    },
-    {
-      name: 'menuItem3',
-    },
-  ];
-
   const component = shallow(<MainMenu items={ menuItems } />);
 
   it('MainMenu children count should be equal menuItems length', () => {
