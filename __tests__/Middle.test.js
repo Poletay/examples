@@ -7,8 +7,24 @@ configure({
   adapter: new Adapter(),
 });
 
+const contents = [
+  {
+    name: 'menuItem1',
+    path: '/',
+  },
+  {
+    name: 'menuItem2',
+    path: '/',
+  },
+  {
+    name: 'menuItem3',
+    path: '/',
+  },
+];
+
+
 describe('Footer component test', () => {
   it('should be selectable by class "main-middle"', () => {
-    expect(shallow(<Middle />).is('.main-middle')).toBe(true);
+    expect(shallow(<Middle contents={contents} />).is('.main-middle')).toBe(true);
   });
 });
