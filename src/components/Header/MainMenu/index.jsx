@@ -1,9 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const MainMenu = () => (
-  <div className="main-menu">
-    Main menu implementation here!  
-  </div>
-);
+export default class MainMenu extends React.Component {
+  static propTypes = {
+    mainAppStructure: PropTypes.array,
+  }
 
-export default MainMenu;
+  render() {
+    console.log(this.props.mainAppStructure);
+    return (
+      <div className="main-menu">
+        Main menu implementation here!!
+      </div>
+    );
+  }
+}
