@@ -15,6 +15,7 @@ import PatternsChapter from './components/contentChapters/PatternsChapter';
 import PaymentChapter from './components/contentChapters/PaymentChapter';
 import SequrityChapter from './components/contentChapters/SequrityChapter';
 import SicpChapter from './components/contentChapters/SicpChapter';
+import AboutMe from './components/contentChapters/AboutMe';
 
 // import menuItems from './components/contentChapters';
 
@@ -46,6 +47,7 @@ const mainAppStructure = [
   { name: 'Payment', path: '/payment', component: PaymentChapter },
   { name: 'Sequrity', path: '/sequrity', component: SequrityChapter },
   { name: 'SICP', path: '/sicp', component: SicpChapter },
+  { name: 'About me', path: '/aboutme', component: AboutMe },
 ];
 
 render(
