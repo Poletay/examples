@@ -10,6 +10,8 @@ import App from './components/App';
 import AlgorithmsChapter from './components/contentChapters/AlgorithmsChapter';
 import LayoutsChapter from './components/contentChapters/LayoutsChapter';
 import LibsChapter from './components/contentChapters/LibsChapter';
+import Home from './components/contentChapters/Home';
+
 // import menuItems from './components/contentChapters';
 
 /*
@@ -32,6 +34,11 @@ const store = createStore(
 */
 
 const mainAppStructure = [
+  {
+    name: 'Home',
+    path: '/',
+    component: Home,
+  },
   {
     name: 'Algorithms',
     path: '/algorithms',

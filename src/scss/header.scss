@@ -18,3 +18,13 @@
 .main-menu a {
   color: $main-menu-text-color;
 }
+
+.main-menu a:hover {
+  background-color: darken($main-menu-bg-color, 9%);
+  color: darken($main-menu-text-color, 9%);
+}
+
+.main-menu a.active {
+  background-color: darken($main-menu-bg-color, 9%);
+  color: darken($main-menu-text-color, 9%);
+}
