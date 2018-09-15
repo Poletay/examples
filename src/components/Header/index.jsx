@@ -12,7 +12,7 @@ class Header extends React.Component {
     return (
       <div className="main-header">
         <MainLogo />
-        <MainMenu mainAppStructure={this.props.mainAppStructure} />
+        <MainMenu items={this.props.mainAppStructure} />
       </div>
     );
   }

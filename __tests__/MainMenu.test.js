@@ -9,7 +9,7 @@ configure({
 
 describe('MainMenu components test', () => {
   it('should be selectable by class "main-menu"', () => {
-    expect(shallow(<MainMenu />).is('.main-menu')).toBe(true);
+    expect(shallow(<MainMenu items={[]} />).is('.main-menu')).toBe(true);
   });
 });
 

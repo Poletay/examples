@@ -14,3 +14,7 @@
   background-color: $main-menu-bg-color;
   flex-grow: 1;
 }
+
+.main-menu a {
+  color: $main-menu-text-color;
+}
