@@ -9,8 +9,10 @@ export default class Middle extends React.Component {
   };
 
   makeContentsList = (elements) => {
-    const elementsList = elements.map(el => (
-        <Route key={uniqueId()} path={el.path} component={el.component} />
+    const elementsList = elements.map(({ path, component }) => (
+      path === '/'
+        ? <Route exact key={uniqueId()} path={path} component={component} />
+        : <Route key={uniqueId()} path={path} component={component} />
     ));
     return elementsList;
   }

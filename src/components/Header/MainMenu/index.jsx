@@ -9,9 +9,13 @@ export default class MainMenu extends React.Component {
   }
 
   makeElementsList = (elements) => {
-    const elementsList = elements.map(el => (
+    const elementsList = elements.map(({ path, name }) => (
       <li className="nav-item" key={uniqueId()}>
-        <NavLink exact to={el.path} className="nav-link" activeClassName="active">{el.name}</NavLink>
+        {
+          path === '/'
+            ? <NavLink to={path} exact className="nav-link" activeClassName="active">{name}</NavLink>
+            : <NavLink to={path} className="nav-link" activeClassName="active">{name}</NavLink>
+        }
       </li>
     ));
     return elementsList;
