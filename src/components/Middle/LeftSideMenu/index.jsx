@@ -6,6 +6,7 @@ import { uniqueId } from 'lodash';
 export default class LeftSideMenu extends React.Component {
   static propTypes = {
     items: PropTypes.array,
+    parentUrl: PropTypes.string,
   }
 
   makeElementsList = (elements) => {

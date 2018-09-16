@@ -1,26 +1,40 @@
 import React from 'react';
-import { HashRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { uniqueId } from 'lodash';
 import LeftSideMenu from '../../Middle/LeftSideMenu';
 import SearchAlgorithms from './SearchAlgorithms';
 import SortAlgorithms from './SortAlgorithms';
 
-const algorithmsList = [
-  { name: 'Search Algorithms', path: '/search', component: SearchAlgorithms },
-  { name: 'Sort Algorithms', path: '/sort', component: SortAlgorithms },
-];
+export default class AlgorithmsChapter extends React.Component {
+  static propTypes = {
+    match: PropTypes.object,
+  }
 
-const AlgorithmsChapter = () => (
-  <HashRouter>
-    <div className="chapter-algorithms">
-      <div className="row">
-        <div className="col-4">
-          <LeftSideMenu items={algorithmsList} />
-        </div>
-        <div className="col-8">
+  algorithmsList = [
+    { name: 'Search Algorithms', path: `${this.props.match.url}/search`, component: SearchAlgorithms },
+    { name: 'Sort Algorithms', path: `${this.props.match.url}/sort`, component: SortAlgorithms },
+  ];
+
+  makeContentsList = (elements) => {
+    const elementsList = elements.map(el => (
+        <Route key={uniqueId()} path={el.path} component={el.component} />
+    ));
+    return elementsList;
+  }
+
+  render() {
+    return (
+      <div className="chapter-algorithms">
+        <div className="row">
+          <div className="col-3">
+            <LeftSideMenu parentUrl={this.props.match.url} items={this.algorithmsList} />
+          </div>
+          <div className="col-9">
+            {this.makeContentsList(this.algorithmsList)}
+          </div>
         </div>
       </div>
-    </div>
-  </HashRouter>
-);
-
-export default AlgorithmsChapter;
+    );
+  }
+}
