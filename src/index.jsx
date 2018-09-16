@@ -2,10 +2,6 @@ import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 import { HashRouter } from 'react-router-dom';
-// import { createStore, compose } from 'redux';
-// import { Provider } from 'react-redux';
-// import thunk from 'redux-thunk';
-// import reducers from './reducers';
 import App from './components/App';
 import Home from './components/contentChapters/Home';
 import AlgorithmsChapter from './components/contentChapters/AlgorithmsChapter';
@@ -16,27 +12,6 @@ import PaymentChapter from './components/contentChapters/PaymentChapter';
 import SequrityChapter from './components/contentChapters/SequrityChapter';
 import SicpChapter from './components/contentChapters/SicpChapter';
 import AboutMe from './components/contentChapters/AboutMe';
-
-// import menuItems from './components/contentChapters';
-
-/*
-const ext = window.__REDUX_DEVTOOLS_EXTENSION__; // eslint-disable-line
-const devtoolMiddleware = ext && ext();
-const middlewares = _.compact([
-//  applyMiddleware(thunk),
-  devtoolMiddleware,
-]);
-
-const defaultState = {
-  mainMenuItems: menuItems,
-};
-
-const store = createStore(
-  reducers,
-  defaultState,
-  compose(...middlewares),
-);
-*/
 
 const mainAppStructure = [
   { name: 'Home', path: '/', component: Home },
