@@ -10,16 +10,17 @@ class App extends React.Component {
   }
 
   render() {
+    const { mainAppStructure } = this.props;
     return (
       <div className="main">
         <div className="row">
           <div className="col-12">
-            <Header mainAppStructure={this.props.mainAppStructure} />
+            <Header mainAppStructure={mainAppStructure} />
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <Middle contents={this.props.mainAppStructure} />
+            <Middle contents={mainAppStructure} />
           </div>
         </div>
         <div className="row">
