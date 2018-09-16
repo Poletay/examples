@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainLogo = () => (
   <div className="main-logo">
-    Knowlage Base
+    MY KNOWLAGE BASE
   </div>
 );
 

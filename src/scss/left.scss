@@ -1,17 +1,19 @@
-.left-content {
-  display: flex;
+.left-side-menu {
   box-shadow: $main-shadow;
-  background-color: #66CC99;
-  margin-bottom: 10px;
+  background-color: $left-menu-bg-color;
+  height: 100%;
 }
 
-.left-menu {
-  display: flex;
-  flex-wrap: wrap;
+.left-side-menu a {
+  color: $left-menu-text-color;
 }
 
-.left-menu .menu-item {
-  flex-grow: 1;
-  flex-basis: 90%;
-  margin-left: 10%;
+.left-side-menu a:hover {
+  background-color: darken($left-menu-bg-color, 9%);
+  color: darken($left-menu-text-color, 9%);
+}
+
+.left-side-menu a.active {
+  background-color: darken($left-menu-bg-color, 9%);
+  color: darken($left-menu-text-color, 9%);
 }

@@ -12,7 +12,7 @@ export default class LeftSideMenu extends React.Component {
   makeElementsList = (elements) => {
     const elementsList = elements.map(el => (
       <li className="nav-item" key={uniqueId()}>
-        <NavLink exact to={el.path} className="nav-link" activeClassName="active">{el.name}</NavLink>
+        <NavLink to={el.path} className="nav-link" activeClassName="active">{el.name}</NavLink>
       </li>
     ));
     return elementsList;
@@ -20,7 +20,7 @@ export default class LeftSideMenu extends React.Component {
 
   render() {
     return (
-      <ul className="nav flex-column">
+      <ul className="nav flex-column left-side-menu">
         {this.makeElementsList(this.props.items)}
       </ul>
     );

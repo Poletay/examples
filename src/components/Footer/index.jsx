@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => (
   <div className="main-footer">
-    FOOTER HERE
+    &nbsp;
   </div>
 );
 

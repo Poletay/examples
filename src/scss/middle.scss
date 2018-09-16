@@ -1,5 +1,9 @@
 .main-middle {
   background-color: #FFFFDD;
-  min-height: 500px;
+  min-height: $middle-min-height;
   margin-bottom: 10px;
+}
+
+.main-middle .row {
+  min-height: $middle-min-height;
 }

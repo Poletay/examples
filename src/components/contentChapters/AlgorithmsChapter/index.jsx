@@ -5,6 +5,7 @@ import { uniqueId } from 'lodash';
 import LeftSideMenu from '../../Middle/LeftSideMenu';
 import SearchAlgorithms from './SearchAlgorithms';
 import SortAlgorithms from './SortAlgorithms';
+import DinamicProgAlgorithms from './DinfmicProgAlgorithms';
 
 export default class AlgorithmsChapter extends React.Component {
   static propTypes = {
@@ -14,6 +15,7 @@ export default class AlgorithmsChapter extends React.Component {
   algorithmsList = [
     { name: 'Search Algorithms', path: `${this.props.match.url}/search`, component: SearchAlgorithms },
     { name: 'Sort Algorithms', path: `${this.props.match.url}/sort`, component: SortAlgorithms },
+    { name: 'Dinamic Programming', path: `${this.props.match.url}/dinamicprog`, component: DinamicProgAlgorithms },
   ];
 
   makeContentsList = (elements) => {

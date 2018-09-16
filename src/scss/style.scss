@@ -1,12 +1,20 @@
 @import "~bootstrap/scss/bootstrap";
 
-$main-header-text-color: #006633;
-$main-logo-bg-color: #33CC66;
-$main-menu-bg-color: #00CC33;
-$main-menu-text-color: #006633;
-$main-footer-bg-color: #FF6699;
-$main-footer-text-color: #990033;
+$main-header-text-color: #f4cb67;
+$main-header-bg-color: #2d3439;
+$main-logo-bg-color: #2d3439;
+$main-menu-bg-color: #2d3439;
+$main-menu-text-color: #c6ccd2;
+
+$left-menu-bg-color: #c6ccd2;
+$left-menu-text-color: grey;
+
+$main-footer-bg-color: #2d3439;
+$main-footer-text-color: #f4cb67;
+
 $main-shadow: 0.2em 0.2em 3px rgba(122,122,122,0.5);
+
+$middle-min-height: 500px;
 
 @import "main";
 @import "header";
