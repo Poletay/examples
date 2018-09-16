@@ -2,6 +2,7 @@ import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 import { HashRouter } from 'react-router-dom';
+import rootRoutes from './components/rootRoutes';
 import App from './components/App';
 import Home from './components/contentChapters/Home';
 import AlgorithmsChapter from './components/contentChapters/AlgorithmsChapter';
@@ -13,7 +14,7 @@ import SequrityChapter from './components/contentChapters/SequrityChapter';
 import SicpChapter from './components/contentChapters/SicpChapter';
 import AboutMe from './components/contentChapters/AboutMe';
 
-const mainAppStructure = [
+const routes = [
   { name: 'Home', path: '/', component: Home },
   { name: 'Algorithms', path: '/algorithms', component: AlgorithmsChapter },
   { name: 'Layouts', path: '/layouts', component: LayoutsChapter },
@@ -27,7 +28,9 @@ const mainAppStructure = [
 
 render(
   <HashRouter>
-    <App mainAppStructure={mainAppStructure} />
+    <rootRoutes.Provider value={routes}>
+      <App />
+    </rootRoutes.Provider>
   </HashRouter>,
   document.getElementById('container'),
 );

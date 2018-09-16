@@ -1,21 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import MainLogo from './MainLogo';
 import MainMenu from './MainMenu';
+import rootRoutes from '../rootRoutes';
 
-class Header extends React.Component {
-  static propTypes = {
-    mainAppStructure: PropTypes.array,
-  }
-
-  render() {
-    return (
-      <div className="main-header">
-        <MainLogo />
-        <MainMenu items={this.props.mainAppStructure} />
-      </div>
-    );
-  }
-}
+const Header = () => (
+  <div className="main-header">
+    <MainLogo />
+    <rootRoutes.Consumer>
+      {routes => (
+        <MainMenu items={routes} />
+      )}
+    </rootRoutes.Consumer>
+  </div>
+);
 
 export default Header;
