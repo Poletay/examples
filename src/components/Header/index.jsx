@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLogo from './MainLogo';
-import MainMenu from './MainMenu';
+import Menu from '../Menu';
 import rootRoutes from '../rootRoutes';
 
 const Header = () => (
@@ -8,7 +8,7 @@ const Header = () => (
     <MainLogo />
     <rootRoutes.Consumer>
       {routes => (
-        <MainMenu items={routes} />
+        <Menu items={routes} menuName='main-menu' />
       )}
     </rootRoutes.Consumer>
   </div>

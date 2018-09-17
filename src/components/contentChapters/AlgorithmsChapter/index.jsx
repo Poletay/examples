@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { uniqueId } from 'lodash';
-import LeftSideMenu from '../../Middle/LeftSideMenu';
+import Menu from '../../Menu';
 import SearchAlgorithms from './SearchAlgorithms';
 import SortAlgorithms from './SortAlgorithms';
 import DinamicProgAlgorithms from './DinfmicProgAlgorithms';
@@ -30,7 +30,7 @@ export default class AlgorithmsChapter extends React.Component {
       <div className="chapter-algorithms">
         <div className="row">
           <div className="col-3">
-            <LeftSideMenu parentUrl={this.props.match.url} items={this.algorithmsList} />
+            <Menu items={this.algorithmsList} menuName='left-side-menu' menuType='flex-column' />
           </div>
           <div className="col-9">
             {this.makeContentsList(this.algorithmsList)}
