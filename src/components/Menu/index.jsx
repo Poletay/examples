@@ -28,8 +28,6 @@ export default class Menu extends React.Component {
     const { menuType, menuName, items } = this.props;
     const classNames = cn('nav', menuType, menuName);
 
-    console.log(menuName);
-
     return (
       <ul className={classNames}>
         {this.makeElementsList(items)}
