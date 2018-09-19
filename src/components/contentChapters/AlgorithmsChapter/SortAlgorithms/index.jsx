@@ -7,7 +7,7 @@ import BubbleSort from './BubbleSort';
 import CocktailSort from './CocktailSort';
 import InsertionSort from './InsertionSort';
 
-export default class AlgorithmsChapter extends React.Component {
+export default class SortAlgorithms extends React.Component {
   static propTypes = {
     match: PropTypes.object,
   }
