@@ -6,7 +6,7 @@ start:
 prod:
 	node dist
 lint:
-	npm run eslint .
+	npm run eslint --  --ext js --ext jsx .
 build:
 	rm -rf dist
 	npm run build

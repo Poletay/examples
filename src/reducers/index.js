@@ -1,9 +1,13 @@
 import { combineReducers } from 'redux';
 import { handleActions } from 'redux-actions';
-// import * as actions from '../actions';
+import * as actions from '../actions';
 
-const mainMenuItems = handleActions({}, {});
+const currentLocation = handleActions({
+  [actions.changeLocation](state, { payload: { location } }) {
+    return location;
+  },
+}, {});
 
 export default combineReducers({
-  mainMenuItems,
+  currentLocation,
 });

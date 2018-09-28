@@ -5,7 +5,8 @@ import { uniqueId } from 'lodash';
 import Menu from '../../Menu';
 import SearchAlgorithms from './SearchAlgorithms';
 import SortAlgorithms from './SortAlgorithms';
-import DinamicProgAlgorithms from './DinfmicProgAlgorithms';
+import DinamicProgAlgorithms from './DinamicProgAlgorithms';
+// import RoutesList from '../../RoutesList';
 
 export default class AlgorithmsChapter extends React.Component {
   static propTypes = {
