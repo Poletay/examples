@@ -1,8 +1,3 @@
-engines:
-    duplications:
-        enabled: true
-        config:
-            javascript:
-                mass_threshold: 75
 exclude_patterns:
     - "__tests__/*.*"
+    

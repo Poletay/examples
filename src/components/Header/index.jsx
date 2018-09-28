@@ -8,7 +8,7 @@ const Header = () => (
     <MainLogo />
     <rootRoutes.Consumer>
       {routes => (
-        <Menu items={routes} menuName='main-menu' />
+        <Menu routes={routes} menuName='main-menu' />
       )}
     </rootRoutes.Consumer>
   </div>

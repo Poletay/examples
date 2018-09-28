@@ -1,29 +1,19 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { uniqueId } from 'lodash';
-import connect from '../connect';
 
-const mapStateToProps = ({ currentLocation }) => ({ currentLocation });
+const RouteWithSubroutes = route => (
+  <Route path={route.path} exact={route.exact} render={props => (
+    <route.component {...props} routes={route.routes} />
+  )} />
+);
 
-class RoutesList extends React.Component {
-  static propTypes = {
-    routesList: PropTypes.array,
-    currentLocation: PropTypes.string,
-    state: PropTypes.object,
-  }
+const RoutesList = ({ routes }) => routes.map(route => (
+    <RouteWithSubroutes key={route.path} {...route} />
+));
 
-  makeContentsList = (elements) => {
-    const currentLocation = this.props.currentLocation === '/' ? '' : this.props.currentLocation;
-    const elementsList = elements.map(({ path, component }) => (
-      path === '/'
-        ? <Route exact key={uniqueId()} path={`${currentLocation}${path}`} component={component} />
-        : <Route key={uniqueId()} path={`${currentLocation}${path}`} component={component} />
-    ));
-    return elementsList;
-  }
+RoutesList.propTypes = {
+  routes: PropTypes.array,
+};
 
-  render = () => this.makeContentsList(this.props.routesList);
-}
-
-export default connect(mapStateToProps)(RoutesList);
+export default RoutesList;

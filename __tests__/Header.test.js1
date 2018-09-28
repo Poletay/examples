@@ -12,7 +12,7 @@ describe('App components test', () => {
     expect(shallow(<Header />).is('.main-header')).toBe(true);
   });
 });
-
+/*
 describe('Main header layout tests', () => {
   const component = shallow(<Header />);
   it('Main header must contain only 2 elements', () => {
@@ -23,9 +23,9 @@ describe('Main header layout tests', () => {
     expect(firstElement.name()).toBe('MainLogo');
   });
 
-/*  it('second element should contain MainMenu component', () => {
+  it('second element should contain MainMenu component', () => {
     const secondElement = component.childAt(1);
     expect(secondElement.name()).toBe('MainMenu');
   });
-*/
-});
+
+}); */

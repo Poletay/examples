@@ -6,7 +6,7 @@ const Middle = () => (
   <div className="main-middle">
     <rootRoutes.Consumer>
     {routes => (
-      <RoutesList routesList={routes} />
+      <RoutesList routes={routes} />
     )}
     </rootRoutes.Consumer>
   </div>
