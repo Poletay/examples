@@ -3,6 +3,6 @@ engines:
         enabled: true
         config:
             javascript:
-                mass_threshold: 50
+                mass_threshold: 75
 exclude_patterns:
     - "__tests__/*.*"
