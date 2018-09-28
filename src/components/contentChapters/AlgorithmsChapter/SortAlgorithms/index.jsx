@@ -4,7 +4,7 @@ import Menu from '../../../Menu';
 import RoutesList from '../../../RoutesList';
 
 const SortAlgorithms = ({ routes }) => (
-  <div className="chapter-algorithms">
+  <div className="sort-algorithms">
     <div className="row">
       <div className="col-3">
         <Menu routes={routes} menuName='right-side-menu' menuType='flex-column' />
