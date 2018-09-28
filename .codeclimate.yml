@@ -1,7 +1,7 @@
 engines:
     duplications:
         enabled: true
-        congig:
+        config:
             javascript:
                 mass_threshold: 50                
 exclude_patterns:
