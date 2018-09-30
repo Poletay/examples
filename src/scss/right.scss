@@ -1,0 +1,18 @@
+.right-side-menu {
+  box-shadow: $main-shadow;
+  background-color: lighten($right-menu-bg-color, 9%);
+}
+
+.right-side-menu a {
+  color: $right-menu-text-color;
+}
+
+.right-side-menu a:hover {
+  background-color: darken($right-menu-bg-color, 9%);
+  color: darken($right-menu-text-color, 9%);
+}
+
+.right-side-menu a.active {
+  background-color: darken($right-menu-bg-color, 9%);
+  color: darken($right-menu-text-color, 9%);
+}

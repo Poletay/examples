@@ -9,6 +9,9 @@ $main-menu-text-color: #c6ccd2;
 $left-menu-bg-color: #c6ccd2;
 $left-menu-text-color: grey;
 
+$right-menu-bg-color: #f4cb67;
+$right-menu-text-color: #2d3439;
+
 $main-footer-bg-color: #2d3439;
 $main-footer-text-color: #f4cb67;
 
@@ -19,5 +22,6 @@ $middle-min-height: 500px;
 @import "main";
 @import "header";
 @import "left";
+@import "right";
 @import "middle";
 @import "footer";
