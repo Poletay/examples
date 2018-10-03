@@ -53,4 +53,14 @@ module.exports = {
     maxAssetSize: 1700000,
   },
   stats: 'errors-only',
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      cacheGroups: {
+        vendors: {
+          reuseExistingChunk: true,
+        },
+      },
+    },
+  },
 };
