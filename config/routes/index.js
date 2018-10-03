@@ -1,13 +1,12 @@
-import AlgorithmsChapter from '../../src/components/contentChapters/AlgorithmsChapter';
-import LibsChapter from '../../src/components/contentChapters/LibsChapter';
-import PatternsChapter from '../../src/components/contentChapters/PatternsChapter';
-import PaymentChapter from '../../src/components/contentChapters/PaymentChapter';
-import SequrityChapter from '../../src/components/contentChapters/SequrityChapter';
-import SicpChapter from '../../src/components/contentChapters/SicpChapter';
-import AboutMe from '../../src/components/contentChapters/AboutMe';
-
 import Home from '../../src/components/contentChapters/Home/lazyLoad';
+import AlgorithmsChapter from '../../src/components/contentChapters/AlgorithmsChapter/lazyLoad';
 import LayoutsChapter from '../../src/components/contentChapters/LayoutsChapter/lazyLoad';
+import LibsChapter from '../../src/components/contentChapters/LibsChapter/lazyLoad';
+import PatternsChapter from '../../src/components/contentChapters/PatternsChapter/lazyLoad';
+import PaymentChapter from '../../src/components/contentChapters/PaymentChapter/lazyLoad';
+import SequrityChapter from '../../src/components/contentChapters/SequrityChapter/lazyLoad';
+import SicpChapter from '../../src/components/contentChapters/SicpChapter/lazyLoad';
+import AboutMe from '../../src/components/contentChapters/AboutMe/lazyLoad';
 
 import algorithmsRoutes from './algorithmsRoutes';
 
