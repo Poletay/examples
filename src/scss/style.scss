@@ -1,4 +1,8 @@
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/_root";
+@import "~bootstrap/scss/_type";
+@import "~bootstrap/scss/_nav";
 
 $main-header-text-color: #f4cb67;
 $main-header-bg-color: #2d3439;
