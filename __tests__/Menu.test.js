@@ -41,5 +41,10 @@ describe('Menu component tests', () => {
         expect(node.find('.nav-link').childAt(0).debug()).toBe(menuItems[itemIndex].name);
       });
     });
+    it('MenuItems should take path from Array of Object', () => {
+      component.children().forEach((node, itemIndex) => {
+        expect(node.find('.nav-link').childAt(0).debug()).toBe(menuItems[itemIndex].name);
+      });
+    });
   });
 });
