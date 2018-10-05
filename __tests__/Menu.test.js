@@ -35,8 +35,10 @@ describe('Menu component tests', () => {
     it('MainMenu children count should be equal menuItems length', () => {
       expect(component.children().length).toBe(menuItems.length);
     });
-    it('MenuItems should take value from Array of Object', () => {
-      expect(component.children().length).toBe(menuItems.length);
+    it('MenuItems should take values from Array of Object', () => {
+      component.children().forEach((node, itemIndex) => {
+        expect(node.find('.nav-link').childAt(0).debug()).toBe(menuItems[itemIndex].name);
+      });
     });
   });
 });
