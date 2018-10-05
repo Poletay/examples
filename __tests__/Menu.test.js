@@ -6,7 +6,8 @@ import Menu from '../src/components/Menu';
 configure({
   adapter: new Adapter(),
 });
-
+const menuName = 'main-menu';
+const menuType = 'main-type';
 const menuItems = [
   {
     name: 'menuItem1',
@@ -23,12 +24,12 @@ const menuItems = [
 ];
 
 describe('Menu component tests', () => {
-  const component = shallow(<Menu routes={menuItems} menuName='main-menu' menuType="main-type" />);
+  const component = shallow(<Menu routes={menuItems} menuName={menuName} menuType={menuType} />);
   it('should be selectable by menuName', () => {
-    expect(component.is('.main-menu')).toBe(true);
+    expect(component.is(`.${menuName}`)).toBe(true);
   });
   it('should be selectable by menuType', () => {
-    expect(component.is('.main-type')).toBe(true);
+    expect(component.is(`.${menuType}`)).toBe(true);
   });
 
   describe('MainMenu should take menu-items list as Array of Objects', () => {
