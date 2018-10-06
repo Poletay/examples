@@ -1,4 +1,3 @@
-/*
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
@@ -14,7 +13,7 @@ describe('App component test', () => {
   });
 });
 
-
+/*
 describe('Main layout tests', () => {
   const component = shallow(<App />);
   it('should contain 3 rows"', () => {
@@ -36,4 +35,5 @@ describe('Main layout tests', () => {
     const footerCell = component.childAt(2).childAt(0).childAt(0);
     expect(footerCell.name()).toBe('Footer');
   });
-}); */
+});
+*/
