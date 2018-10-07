@@ -22,7 +22,6 @@ describe('App component test', () => {
     });
 
     it('first row should contain Header, Middle and Footer components', () => {
-      console.log(component.find('div.row').at(0).debug());
       expect(component.contains(<Header />)).toBe(true);
       expect(component.contains(<Middle />)).toBe(true);
       expect(component.contains(<Footer />)).toBe(true);
