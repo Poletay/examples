@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SequrityChapter = () => (
+const SecurityChapter = () => (
   <div className="chapter-sequrity">
     Sequrity chapter here!
   </div>
 );
 
-export default SequrityChapter;
+export default SecurityChapter;
