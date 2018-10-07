@@ -2,7 +2,7 @@ import React from 'react';
 
 const SecurityChapter = () => (
   <div className="chapter-sequrity">
-    Sequrity chapter here!
+    Security chapter here!
   </div>
 );
 
