@@ -7,7 +7,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist/app/js', 'dist/app/css']),
     new MiniCssExtractPlugin({
       filename: './css/style.bundle.css',
     }),

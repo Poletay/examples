@@ -8,8 +8,10 @@ prod:
 lint:
 	npm run eslint --  --ext js --ext jsx .
 build:
+	rm -rf dist
 	npm run build
 develop:
+	rm -rf dist
 	NODE_ENV=development npm run build
 test:
 	npm run test
