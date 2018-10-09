@@ -1,11 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
       filename: './css/style.bundle.css',
     }),

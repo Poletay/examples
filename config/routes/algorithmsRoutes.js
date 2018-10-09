@@ -1,9 +1,36 @@
-import SearchAlgorithms from '../../src/components/contentChapters/AlgorithmsChapter/SearchAlgorithms/lazyLoad';
-import SortAlgorithms from '../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/lazyLoad';
-import DinamicProgAlgorithms from '../../src/components/contentChapters/AlgorithmsChapter/DinamicProgAlgorithms/lazyLoad';
-import BubbleSort from '../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/BubbleSort';
-import CocktailSort from '../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/CocktailSort';
-import InsertionSort from '../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/InsertionSort';
+import React from 'react';
+import Loadable from 'react-loadable';
+
+const Loading = () => <div>Losding...</div>;
+const SearchAlgorithms = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SearchAlgorithms'),
+  loading: Loading,
+});
+
+const SortAlgorithms = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms'),
+  loading: Loading,
+});
+
+const DinamicProgAlgorithms = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/DinamicProgAlgorithms'),
+  loading: Loading,
+});
+
+const BubbleSort = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/BubbleSort'),
+  loading: Loading,
+});
+
+const CocktailSort = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/CocktailSort'),
+  loading: Loading,
+});
+
+const InsertionSort = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/InsertionSort'),
+  loading: Loading,
+});
 
 export default [
   { name: 'Search Algorithms', path: '/algorithms/search', component: SearchAlgorithms },
