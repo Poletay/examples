@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => (
   <div className="chapter-home">
-    Home chapter here!
+    Home sweet home chapter here!
   </div>
 );
 

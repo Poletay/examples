@@ -6,11 +6,12 @@ const AlgorithmsLayoutTemplate = ({
 }) => (
   <div className="card">
     <div className="card-header">
-      {algorithmTitle}
+      <h5 className="card-title">{algorithmTitle}</h5>
     </div>
     <div className="card-body">{description}</div>
-    <div className="card-body">{entryData}</div>
-    <div className="card-body">{result}</div>
+    <div className="card-body"><strong>Entry data:</strong> {entryData}</div>
+    <div className="card-body"><button>Apply algorithm</button></div>
+    <div className="card-body"><strong>Result data:</strong>{result}</div>
   </div>
 );
 
