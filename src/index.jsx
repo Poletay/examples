@@ -11,6 +11,7 @@ const devtoolMiddleware = ext && ext();
 
 const defaultState = {
   currentLocation: '/',
+  algorithms: {},
 };
 
 const store = createStore(

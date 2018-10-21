@@ -1,5 +1,4 @@
 import { createAction } from 'redux-actions';
 
-const changeLocation = createAction('CHANGE/LOCATEON');
-
-export default changeLocation;
+export const changeLocation = createAction('CHANGE/LOCATEON');
+export const applyAlgorithm = createAction('APPLY/ALGORITHM');

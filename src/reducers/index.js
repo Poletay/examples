@@ -8,6 +8,20 @@ const currentLocation = handleActions({
   },
 }, {});
 
+const algorithms = handleActions({
+  [actions.applyAlgorithm](state, { payload: { algorithmName, algorithmFunc, entryData } }) {
+    const resultData = algorithmFunc(entryData);
+    return {
+      ...state,
+      [algorithmName]: {
+        entryData,
+        resultData,
+      },
+    };
+  },
+}, {});
+
 export default combineReducers({
   currentLocation,
+  algorithms,
 });
