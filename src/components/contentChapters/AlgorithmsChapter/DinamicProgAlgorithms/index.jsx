@@ -1,8 +1,9 @@
 import React from 'react';
+import Home from '../../Home';
 
 const DinamicProgAlgorithms = () => (
   <div className="chapter-dinamicprog-algorithms">
-    Dinamic Programming Algorithms chapter here!
+    <Home algorithmName="cocktailSorting" />
   </div>
 );
 

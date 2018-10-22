@@ -1,8 +1,9 @@
 import React from 'react';
+import Home from '../../Home';
 
 const InsertionSort = () => (
   <div className="bubble-sort-algorithm">
-    Insertion Sort algorithm here!
+    <Home algorithmName="insertionSorting" />
   </div>
 );
 
