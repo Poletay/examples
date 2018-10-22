@@ -65,14 +65,14 @@ const sortArray = (arr) => {
   return cocktailSort(arr, start, end, defaultStatus);
 };
 
-const CocktailSort = () => (
-  <AlgorithmsLayoutTeamplate
-    algorithmTitle={algorithmTitle}
-    description={description}
-    entryData={entryData}
-    algorithmImplementationFunc={sortArray}
-    algorithmName={algorithmName}
-  />
-);
+const algorithm = {
+  title: algorithmTitle,
+  name: algorithmName,
+  description,
+  entryData,
+  func: sortArray,
+};
+
+const CocktailSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
 
 export default CocktailSort;

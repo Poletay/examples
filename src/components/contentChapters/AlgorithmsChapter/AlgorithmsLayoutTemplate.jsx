@@ -7,27 +7,29 @@ const mapStateToProps = ({ algorithms }) => ({ algorithmsState: { ...algorithms 
 class AlgorithmsLayoutTemplate extends React.Component {
   onApplyAlgorithmButtonClick = () => {
     this.props.applyAlgorithm({
-      algorithmFunc: this.props.algorithmImplementationFunc,
-      algorithmName: this.props.algorithmName,
-      entryData: this.props.entryData,
+      algorithmFunc: this.props.algorithm.func,
+      algorithmName: this.props.algorithm.name,
+      entryData: this.props.algorithm.entryData,
     });
   }
 
   render() {
     const {
-      algorithmTitle,
-      description,
-      entryData,
-      algorithmName,
+      algorithm: {
+        title,
+        name,
+        description,
+        entryData,
+      },
       algorithmsState,
     } = this.props;
 
-    const resultData = algorithmsState[algorithmName] ? algorithmsState[algorithmName].resultData : '';
+    const resultData = algorithmsState[name] ? algorithmsState[name].resultData : '';
 
     return (
       <div className="card">
         <div className="card-header">
-          <h5 className="card-title">{algorithmTitle}</h5>
+          <h5 className="card-title">{title}</h5>
         </div>
         <div className="card-body">{description}</div>
         <div className="card-body"><strong>Entry data:</strong> {entryData.toString()}</div>
@@ -38,12 +40,8 @@ class AlgorithmsLayoutTemplate extends React.Component {
   }
 }
 AlgorithmsLayoutTemplate.propTypes = {
-  algorithmTitle: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  entryData: PropTypes.array,
+  algorithm: PropTypes.object.isRequired,
   algorithmsState: PropTypes.object,
-  algorithmName: PropTypes.string,
-  algorithmImplementationFunc: PropTypes.func,
   applyAlgorithm: PropTypes.func,
 };
 

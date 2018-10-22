@@ -44,14 +44,14 @@ const sortArray = (arr) => {
   });
 };
 
-const BubbleSort = () => (
-  <AlgorithmsLayoutTeamplate
-    algorithmTitle={algorithmTitle}
-    description={description}
-    entryData={entryData}
-    algorithmImplementationFunc={sortArray}
-    algorithmName={algorithmName}
-  />
-);
+const algorithm = {
+  title: algorithmTitle,
+  name: algorithmName,
+  description,
+  entryData,
+  func: sortArray,
+};
+
+const BubbleSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
 
 export default BubbleSort;
