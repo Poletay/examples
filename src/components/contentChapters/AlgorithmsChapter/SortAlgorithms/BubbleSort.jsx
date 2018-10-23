@@ -7,12 +7,8 @@ const description = 'Bubble sorting is a simple sorting algorithm that repeatedl
 const entryData = [5, 2, 1, 8, 4, 7, 3, 6];
 
 const bubbleSort = (sortingArray, currentIndex = 0, status = 'notchanged') => {
-  if (status === 'notchanged' && currentIndex === sortingArray.length) {
-    return sortingArray;
-  }
-
-  if (status === 'changed' && currentIndex === sortingArray.length) {
-    return bubbleSort(sortingArray);
+  if (currentIndex === sortingArray.length) {
+    return status === 'changed' ? bubbleSort(sortingArray) : sortingArray;
   }
 
   const nextIndex = currentIndex + 1;
