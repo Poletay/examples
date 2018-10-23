@@ -6,7 +6,11 @@ const algorithmName = 'cocktailSorting';
 const description = 'Cocktail sort, also known as bidirectional bubble sort, cocktail shaker sort, shaker sort, ripple sort, shuffle sort or shuttle sort, is a variation of bubble sort that is both a stable sorting algorithm and a comparison sort. The algorithm differs from a bubble sort in that it sorts in both directions on each pass through the list. This sorting algorithm is only marginally more difficult to implement than a bubble sort, and solves the problem of turtles in bubble sorts.';
 const entryData = [9, 5, 2, 1, 8, 4, 7, 3, 6];
 
-const bubbleSort = (sortingArray, startIndex, endIndex, status, step, predicate) => {
+const haveToSwapUpDirection = (current, next) => current > next;
+const haveToSwapDownDirection = (current, next) => current < next;
+
+
+const bubbleSort = (sortingArray, startIndex, endIndex, step, predicate, status = 'notchanged') => {
   if (startIndex === endIndex) {
     return { sortingArray, status };
   }
@@ -21,48 +25,40 @@ const bubbleSort = (sortingArray, startIndex, endIndex, status, step, predicate)
     ];
     currentStatus = 'changed';
   }
-  return bubbleSort(resultArray, nextIndex, endIndex, currentStatus, step, predicate);
+  return bubbleSort(resultArray, nextIndex, endIndex, step, predicate, currentStatus);
+};
+
+const cocktailSort = (sortingArray, startIndex, endIndex) => {
+  const increment = 1;
+  const decrement = -1;
+
+  const onceUpSorted = bubbleSort(
+    sortingArray,
+    startIndex,
+    endIndex,
+    increment,
+    haveToSwapUpDirection,
+  );
+
+  const onceDownSorted = bubbleSort(
+    onceUpSorted.sortingArray,
+    endIndex,
+    startIndex,
+    decrement,
+    haveToSwapDownDirection,
+    onceUpSorted.status,
+  );
+
+  if (onceDownSorted.status === 'changed') {
+    return cocktailSort(onceDownSorted.sortingArray, startIndex + increment, endIndex + decrement);
+  }
+  return onceDownSorted.sortingArray;
 };
 
 const sortArray = (arr) => {
   const start = 0;
   const end = arr.length - 1;
-  const increment = 1;
-  const decrement = -1;
-  const defaultStatus = 'notchanged';
-  const haveToSwapUpDirection = (current, next) => current > next;
-  const haveToSwapDownDirection = (current, next) => current < next;
-
-  const cocktailSort = (sortingArray, startIndex, endIndex, status) => {
-    const onceUpSorted = bubbleSort(
-      sortingArray,
-      startIndex,
-      endIndex,
-      status,
-      increment,
-      haveToSwapUpDirection,
-    );
-    const onceDownSorted = bubbleSort(
-      onceUpSorted.sortingArray,
-      endIndex,
-      startIndex,
-      onceUpSorted.status,
-      decrement,
-      haveToSwapDownDirection,
-    );
-
-    if (onceDownSorted.status === 'changed') {
-      return cocktailSort(
-        onceDownSorted.sortingArray,
-        startIndex + increment,
-        endIndex + decrement,
-        defaultStatus,
-      );
-    }
-    return onceDownSorted.sortingArray;
-  };
-
-  return cocktailSort(arr, start, end, defaultStatus);
+  return cocktailSort(arr, start, end);
 };
 
 const algorithm = {
