@@ -6,10 +6,11 @@ const mapStateToProps = ({ algorithms }) => ({ algorithmsState: { ...algorithms 
 
 class AlgorithmsLayoutTemplate extends React.Component {
   onApplyAlgorithmButtonClick = () => {
+    const { func, name, entryData } = this.props.algorithm;
     this.props.applyAlgorithm({
-      algorithmFunc: this.props.algorithm.func,
-      algorithmName: this.props.algorithm.name,
-      entryData: this.props.algorithm.entryData,
+      algorithmFunc: func,
+      algorithmName: name,
+      entryData,
     });
   }
 
