@@ -4,32 +4,34 @@ import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
 const algorithmTitle = 'Bubble sorting';
 const algorithmName = 'bubbleSorting';
 const description = 'Bubble sorting is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted.';
-const entryData = [5, 2, 1, 8, 4, 7, 3, 6];
+const entryData = [9, 5, 2, 1, 8, 4, 7, 3, 6, 0, -1];
 
-const bubbleSort = (sortingArray, currentIndex = 0, status = 'notchanged') => {
-  if (currentIndex === sortingArray.length) {
-    if (status === 'changed') {
-      return bubbleSort(sortingArray);
-    }
-    return sortingArray;
+const bubbleSort = (sortingArray, startIndex = 0, status = 'notchanged') => {
+  const endIndex = sortingArray.length;
+  if (startIndex === endIndex) {
+    return { sortingArray, status };
   }
 
-  const nextIndex = currentIndex + 1;
+  const nextIndex = startIndex + 1;
   const resultArray = [...sortingArray];
   let currentStatus = status;
 
-  if (resultArray[currentIndex]
-    > resultArray[nextIndex]) {
-    [
-      resultArray[currentIndex],
-      resultArray[nextIndex],
-    ] = [
-      resultArray[nextIndex],
-      resultArray[currentIndex],
+  if (resultArray[startIndex] > resultArray[nextIndex]) {
+    [resultArray[startIndex], resultArray[nextIndex]] = [
+      resultArray[nextIndex], resultArray[startIndex],
     ];
     currentStatus = 'changed';
   }
+
   return bubbleSort(resultArray, nextIndex, currentStatus);
+};
+
+const sortArray = (arr) => {
+  const onceSortResult = bubbleSort(arr);
+  if (onceSortResult.status === 'changed') {
+    return sortArray(onceSortResult.sortingArray);
+  }
+  return onceSortResult.sortingArray;
 };
 
 const algorithm = {
@@ -37,7 +39,7 @@ const algorithm = {
   name: algorithmName,
   description,
   entryData,
-  func: bubbleSort,
+  func: sortArray,
 };
 
 const BubbleSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
