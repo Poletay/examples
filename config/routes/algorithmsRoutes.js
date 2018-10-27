@@ -32,6 +32,11 @@ const InsertionSort = Loadable({
   loading: Loading,
 });
 
+const QuickSort = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/QuickSort'),
+  loading: Loading,
+});
+
 export default [
   { name: 'Search Algorithms', path: '/algorithms/search', component: SearchAlgorithms },
   {
@@ -42,6 +47,7 @@ export default [
       { name: 'Bubble Sort', path: '/algorithms/sort/bubble', component: BubbleSort },
       { name: 'Cocktail Sort', path: '/algorithms/sort/cocktail', component: CocktailSort },
       { name: 'Insertion Sort', path: '/algorithms/sort/insertion', component: InsertionSort },
+      { name: 'Quick Sort', path: '/algorithms/sort/quick', component: QuickSort },
     ],
   },
   { name: 'Dinamic Programming', path: '/algorithms/dinamicprog', component: DinamicProgAlgorithms },
