@@ -1,7 +1,7 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 
-const Loading = () => <div>Losding...</div>;
+const Loading = () => <div>Loading...</div>;
 const SearchAlgorithms = Loadable({
   loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SearchAlgorithms'),
   loading: Loading,

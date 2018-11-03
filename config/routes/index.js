@@ -2,7 +2,7 @@ import React from 'react';
 import Loadable from 'react-loadable';
 import algorithmsRoutes from './algorithmsRoutes';
 
-const Loading = () => <div>Losding...</div>;
+const Loading = () => <div>Loading...</div>;
 const Home = Loadable({
   loader: () => import('../../src/components/contentChapters/Home'),
   loading: Loading,
