@@ -42,6 +42,11 @@ const TreeSort = Loadable({
   loading: Loading,
 });
 
+const MergeSort = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/MergeSort'),
+  loading: Loading,
+});
+
 export default [
   { name: 'Search Algorithms', path: '/algorithms/search', component: SearchAlgorithms },
   {
@@ -54,6 +59,7 @@ export default [
       { name: 'Insertion Sort', path: '/algorithms/sort/insertion', component: InsertionSort },
       { name: 'Quick Sort', path: '/algorithms/sort/quick', component: QuickSort },
       { name: 'Tree Sort', path: '/algorithms/sort/tree', component: TreeSort },
+      { name: 'Merge Sort', path: '/algorithms/sort/merge', component: MergeSort },
     ],
   },
   { name: 'Dinamic Programming', path: '/algorithms/dinamicprog', component: DinamicProgAlgorithms },
