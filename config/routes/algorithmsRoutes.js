@@ -47,8 +47,20 @@ const MergeSort = Loadable({
   loading: Loading,
 });
 
+const DijkstraSearch = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SearchAlgorithms/DijkstraSearch'),
+  loading: Loading,
+});
+
 export default [
-  { name: 'Search Algorithms', path: '/algorithms/search', component: SearchAlgorithms },
+  {
+    name: 'Search Algorithms',
+    path: '/algorithms/search',
+    component: SearchAlgorithms,
+    routes: [
+      { name: 'Dijkstra Search', path: '/algorithms/search/dijkstra', component: DijkstraSearch },
+    ],
+  },
   {
     name: 'Sort Algorithms',
     path: '/algorithms/sort',

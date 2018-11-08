@@ -33,9 +33,9 @@ class AlgorithmsLayoutTemplate extends React.Component {
           <h5 className="card-title">{title}</h5>
         </div>
         <div className="card-body">{description}</div>
-        <div className="card-body"><strong>Entry data:</strong> {entryData.toString()}</div>
+        <div className="card-body"><strong>Entry data:</strong> <pre>{JSON.stringify(entryData, null, '\t')}</pre></div>
         <div className="card-body"><button onClick={this.onApplyAlgorithmButtonClick}>Apply algorithm</button></div>
-        <div className="card-body"><strong>Result data:</strong>{resultData.toString()}</div>
+        <div className="card-body"><strong>Result data:</strong>  <pre>{JSON.stringify(resultData, null, '\t')}</pre></div>
       </div>
     );
   }
