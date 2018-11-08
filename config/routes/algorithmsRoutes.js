@@ -12,6 +12,11 @@ const SortAlgorithms = Loadable({
   loading: Loading,
 });
 
+const GraphAlgorithms = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/GraphAlgorithms'),
+  loading: Loading,
+});
+
 const DinamicProgAlgorithms = Loadable({
   loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/DinamicProgAlgorithms'),
   loading: Loading,
@@ -48,7 +53,7 @@ const MergeSort = Loadable({
 });
 
 const DijkstraSearch = Loadable({
-  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SearchAlgorithms/DijkstraSearch'),
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/GraphAlgorithms/DijkstraSearch'),
   loading: Loading,
 });
 
@@ -57,9 +62,7 @@ export default [
     name: 'Search Algorithms',
     path: '/algorithms/search',
     component: SearchAlgorithms,
-    routes: [
-      { name: 'Dijkstra Search', path: '/algorithms/search/dijkstra', component: DijkstraSearch },
-    ],
+    routes: [],
   },
   {
     name: 'Sort Algorithms',
@@ -72,6 +75,14 @@ export default [
       { name: 'Quick Sort', path: '/algorithms/sort/quick', component: QuickSort },
       { name: 'Tree Sort', path: '/algorithms/sort/tree', component: TreeSort },
       { name: 'Merge Sort', path: '/algorithms/sort/merge', component: MergeSort },
+    ],
+  },
+  {
+    name: 'Algorithms on graphs',
+    path: '/algorithms/graphs',
+    component: GraphAlgorithms,
+    routes: [
+      { name: 'Dijkstra Search', path: '/algorithms/graphs/dijkstra', component: DijkstraSearch },
     ],
   },
   { name: 'Dinamic Programming', path: '/algorithms/dinamicprog', component: DinamicProgAlgorithms },

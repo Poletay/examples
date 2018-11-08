@@ -3,7 +3,8 @@ import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
 
 const algorithmTitle = 'Dijkstra searching';
 const algorithmName = 'dijkstraSearching';
-const description = 'Dijkstra\'s algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks.';
+const description = "Dijkstra's lgorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks.";
+
 const entryData = {
   start: { A: 5, B: 2 },
   A: { C: 4, D: 2 },
@@ -12,6 +13,12 @@ const entryData = {
   D: { finish: 1 },
   finish: {},
 };
+const entryDescription = (
+  <div>
+    {'We have to find the shortest way from "start to "finish"'}
+    <img src="assets/img/graph1.jpg" alt="Graph №1"/>
+  </div>
+);
 
 const dijkstraSearch = (graph = {}) => {
   const result = { ...graph };
@@ -28,6 +35,7 @@ const algorithm = {
   name: algorithmName,
   description,
   entryData,
+  entryDescription,
   func: search,
 };
 

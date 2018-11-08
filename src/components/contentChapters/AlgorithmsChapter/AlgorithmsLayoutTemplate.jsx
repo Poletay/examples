@@ -21,6 +21,7 @@ class AlgorithmsLayoutTemplate extends React.Component {
         name,
         description,
         entryData,
+        entryDescription,
       },
       algorithmsState,
     } = this.props;
@@ -34,6 +35,7 @@ class AlgorithmsLayoutTemplate extends React.Component {
         </div>
         <div className="card-body">{description}</div>
         <div className="card-body"><strong>Entry data:</strong> <pre>{JSON.stringify(entryData, null, '\t')}</pre></div>
+        <div className="card-body">{entryDescription}</div>
         <div className="card-body"><button onClick={this.onApplyAlgorithmButtonClick}>Apply algorithm</button></div>
         <div className="card-body"><strong>Result data:</strong>  <pre>{JSON.stringify(resultData, null, '\t')}</pre></div>
       </div>
