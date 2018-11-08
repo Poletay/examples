@@ -19,3 +19,5 @@ settings:
       extensions:
         - ".js"
         - ".jsx"
+  react:
+    version: "16.6"
