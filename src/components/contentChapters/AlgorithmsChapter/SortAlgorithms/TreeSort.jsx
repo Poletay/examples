@@ -1,5 +1,5 @@
 import React from 'react';
-import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
+import AlgorithmsTemplate from '../AlgorithmsTemplate';
 
 const algorithmTitle = 'Tree sorting';
 const algorithmName = 'treeSorting';
@@ -57,6 +57,6 @@ const algorithm = {
   func: sortArray,
 };
 
-const TreeSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
+const TreeSort = () => <AlgorithmsTemplate algorithm={algorithm} />;
 
 export default TreeSort;

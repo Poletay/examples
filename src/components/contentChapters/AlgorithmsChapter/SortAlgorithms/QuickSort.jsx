@@ -1,5 +1,5 @@
 import React from 'react';
-import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
+import AlgorithmsTemplate from '../AlgorithmsTemplate';
 
 const algorithmTitle = 'Quick sorting';
 const algorithmName = 'quickSorting';
@@ -33,6 +33,6 @@ const algorithm = {
   func: sortArray,
 };
 
-const QuickSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
+const QuickSort = () => <AlgorithmsTemplate algorithm={algorithm} />;
 
 export default QuickSort;

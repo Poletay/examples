@@ -1,5 +1,5 @@
 import React from 'react';
-import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
+import AlgorithmsTemplate from '../AlgorithmsTemplate';
 
 const algorithmTitle = 'Cocktail sorting';
 const algorithmName = 'cocktailSorting';
@@ -69,6 +69,6 @@ const algorithm = {
   func: sortArray,
 };
 
-const CocktailSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
+const CocktailSort = () => <AlgorithmsTemplate algorithm={algorithm} />;
 
 export default CocktailSort;

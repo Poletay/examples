@@ -1,5 +1,5 @@
 import React from 'react';
-import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
+import AlgorithmsTemplate from '../AlgorithmsTemplate';
 
 const algorithmTitle = 'Merge sorting';
 const algorithmName = 'mergeSorting';
@@ -52,6 +52,6 @@ const algorithm = {
   func: sortArray,
 };
 
-const MergeSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
+const MergeSort = () => <AlgorithmsTemplate algorithm={algorithm} />;
 
 export default MergeSort;

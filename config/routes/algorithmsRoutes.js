@@ -2,18 +2,9 @@ import React from 'react';
 import Loadable from 'react-loadable';
 
 const Loading = () => <div>Loading...</div>;
-const SearchAlgorithms = Loadable({
-  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SearchAlgorithms'),
-  loading: Loading,
-});
 
-const SortAlgorithms = Loadable({
-  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms'),
-  loading: Loading,
-});
-
-const GraphAlgorithms = Loadable({
-  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/GraphAlgorithms'),
+const AlgorithmsChapterTemplate = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/AlgorithmsChapterTemplate'),
   loading: Loading,
 });
 
@@ -61,13 +52,13 @@ export default [
   {
     name: 'Search Algorithms',
     path: '/algorithms/search',
-    component: SearchAlgorithms,
+    component: AlgorithmsChapterTemplate,
     routes: [],
   },
   {
     name: 'Sort Algorithms',
     path: '/algorithms/sort',
-    component: SortAlgorithms,
+    component: AlgorithmsChapterTemplate,
     routes: [
       { name: 'Bubble Sort', path: '/algorithms/sort/bubble', component: BubbleSort },
       { name: 'Cocktail Sort', path: '/algorithms/sort/cocktail', component: CocktailSort },
@@ -80,7 +71,7 @@ export default [
   {
     name: 'Algorithms on graphs',
     path: '/algorithms/graphs',
-    component: GraphAlgorithms,
+    component: AlgorithmsChapterTemplate,
     routes: [
       { name: 'Dijkstra Search', path: '/algorithms/graphs/dijkstra', component: DijkstraSearch },
     ],

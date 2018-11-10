@@ -1,6 +1,6 @@
 import React from 'react';
 import { find } from 'lodash';
-import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
+import AlgorithmsTemplate from '../AlgorithmsTemplate';
 
 const algorithmTitle = 'Dijkstra searching';
 const algorithmName = 'dijkstraSearching';
@@ -132,6 +132,6 @@ const algorithm = {
   func: search,
 };
 
-const MergeSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
+const MergeSort = () => <AlgorithmsTemplate algorithm={algorithm} />;
 
 export default MergeSort;

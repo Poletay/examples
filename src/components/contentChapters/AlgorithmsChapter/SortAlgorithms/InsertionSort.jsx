@@ -1,5 +1,5 @@
 import React from 'react';
-import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
+import AlgorithmsTemplate from '../AlgorithmsTemplate';
 
 const algorithmTitle = 'Insertion sorting';
 const algorithmName = 'insertionSorting';
@@ -36,6 +36,6 @@ const algorithm = {
   func: sortArray,
 };
 
-const InsertionSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
+const InsertionSort = () => <AlgorithmsTemplate algorithm={algorithm} />;
 
 export default InsertionSort;

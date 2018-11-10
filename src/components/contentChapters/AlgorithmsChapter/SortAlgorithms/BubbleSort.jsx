@@ -1,5 +1,5 @@
 import React from 'react';
-import AlgorithmsLayoutTeamplate from '../AlgorithmsLayoutTemplate';
+import AlgorithmsTemplate from '../AlgorithmsTemplate';
 
 const algorithmTitle = 'Bubble sorting';
 const algorithmName = 'bubbleSorting';
@@ -42,6 +42,6 @@ const algorithm = {
   func: sortArray,
 };
 
-const BubbleSort = () => <AlgorithmsLayoutTeamplate algorithm={algorithm} />;
+const BubbleSort = () => <AlgorithmsTemplate algorithm={algorithm} />;
 
 export default BubbleSort;

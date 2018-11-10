@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Menu from '../../../Menu';
-import RoutesList from '../../../RoutesList';
+import Menu from '../../Menu';
+import RoutesList from '../../RoutesList';
 
-const GraphAlgorithms = ({ routes }) => (
-  <div className="chapter-graph-algorithms">
+const AlgorithmsChapterTemplate = ({ routes }) => (
+  <div className="algorithms-chapter">
     <div className="row">
       <div className="col-9">
         <RoutesList routes={routes} />
@@ -16,9 +16,9 @@ const GraphAlgorithms = ({ routes }) => (
   </div>
 );
 
-GraphAlgorithms.propTypes = {
+AlgorithmsChapterTemplate.propTypes = {
   routes: PropTypes.array,
 };
 
 
-export default GraphAlgorithms;
+export default AlgorithmsChapterTemplate;
