@@ -39,7 +39,7 @@ class AlgorithmsLayoutTemplate extends React.Component {
         <div className="card-body"><strong>Entry data:</strong> {prettifyData(entryData)}</div>
         <div className="card-body">{entryDescription}</div>
         <div className="card-body"><button onClick={this.onApplyAlgorithmButtonClick}>Apply algorithm</button></div>
-        <div className="card-body"><strong>Result data:</strong>  {prettifyData(resultData)}</div>
+        <div className="card-body"><strong>Result data:</strong>  {resultData.toString()}</div>
       </div>
     );
   }

@@ -48,12 +48,19 @@ const DijkstraSearch = Loadable({
   loading: Loading,
 });
 
+const BinarySearch = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SearchAlgorithms/BinarySearch'),
+  loading: Loading,
+});
+
 export default [
   {
     name: 'Search Algorithms',
     path: '/algorithms/search',
     component: AlgorithmsChapterTemplate,
-    routes: [],
+    routes: [
+      { name: 'Binary Search', path: '/algorithms/search/binary', component: BinarySearch },
+    ],
   },
   {
     name: 'Sort Algorithms',
