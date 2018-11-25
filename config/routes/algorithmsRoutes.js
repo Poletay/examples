@@ -48,6 +48,11 @@ const DijkstraSearch = Loadable({
   loading: Loading,
 });
 
+const BellmanFordSearch = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/GraphAlgorithms/BellmanFordAlgorithm'),
+  loading: Loading,
+});
+
 const BinarySearch = Loadable({
   loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SearchAlgorithms/BinarySearch'),
   loading: Loading,
@@ -81,6 +86,7 @@ export default [
     component: AlgorithmsChapterTemplate,
     routes: [
       { name: 'Dijkstra Search', path: '/algorithms/graphs/dijkstra', component: DijkstraSearch },
+      { name: 'Bellman-Ford Search', path: '/algorithms/graphs/bellmanford', component: BellmanFordSearch },
     ],
   },
   { name: 'Dinamic Programming', path: '/algorithms/dinamicprog', component: DinamicProgAlgorithms },
