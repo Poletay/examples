@@ -91,7 +91,7 @@ const search = (graph) => {
   const startElementName = 'start';
   const endElementName = 'finish';
   const algorithmResult = bellmanFordSearch(graph, startElementName);
-  const foundPath = extractResultPath(algorithmResult.parents, endElementName)
+  const foundPath = extractResultPath(algorithmResult.parents, endElementName).join('->');
   const foundDistance = algorithmResult.distances[endElementName];
   return `Found path: ${foundPath}, Distance: ${foundDistance}`;
 };

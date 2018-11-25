@@ -4,7 +4,7 @@ import connect from '../../../connect';
 
 const mapStateToProps = ({ algorithms }) => ({ algorithmsState: { ...algorithms } });
 
-const prettifyData = data => <pre>{JSON.stringify(data, null, '\t')}</pre>;
+const prettifyData = data => <pre>{JSON.stringify(data, null, ' ')}</pre>;
 
 class AlgorithmsLayoutTemplate extends React.Component {
   onApplyAlgorithmButtonClick = () => {
