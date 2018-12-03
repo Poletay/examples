@@ -12,6 +12,10 @@ extends:
   - airbnb-base
   - "plugin:react/recommended"
   - "plugin:import/react"
+  - "plugin:flowtype/recommended"
+
+plugins:
+  - flowtype
 
 settings:
   "import/resolver":

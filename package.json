@@ -4,8 +4,8 @@
   "description": "Application for publish my experiments",
   "main": "./src/index.js",
   "scripts": {
-    "nodemon": "nodemon",
     "test": "jest",
+    "flow": "flow",
     "build-app": "webpack",
     "build-server": "babel server --out-dir dist --source-maps inline",
     "build": "npm run build-app && npm run build-server",
@@ -43,6 +43,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-flowtype": "^3.2.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.26.2",
     "eslint-plugin-jsx-a11y": "^6.1.2",

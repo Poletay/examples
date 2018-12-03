@@ -2,7 +2,8 @@
   "presets": [
     "env",
     "stage-0",
-    "react"
+    "react",
+    "flow"
   ],
   "env": {
     "test": {
