@@ -43,6 +43,11 @@ const MergeSort = Loadable({
   loading: Loading,
 });
 
+const CountingSort = Loadable({
+  loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/SortAlgorithms/CountingSort'),
+  loading: Loading,
+});
+
 const DijkstraSearch = Loadable({
   loader: () => import('../../src/components/contentChapters/AlgorithmsChapter/GraphAlgorithms/DijkstraSearch'),
   loading: Loading,
@@ -78,6 +83,7 @@ export default [
       { name: 'Quick Sort', path: '/algorithms/sort/quick', component: QuickSort },
       { name: 'Tree Sort', path: '/algorithms/sort/tree', component: TreeSort },
       { name: 'Merge Sort', path: '/algorithms/sort/merge', component: MergeSort },
+      { name: 'Counting Sort', path: '/algorithms/sort/counting', component: CountingSort },
     ],
   },
   {
