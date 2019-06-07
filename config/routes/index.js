@@ -1,6 +1,7 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 import algorithmsRoutes from './algorithmsRoutes';
+import challengesRoutes from './challengesRoutes';
 
 const Loading = () => <div>Loading...</div>;
 const Home = Loadable({
@@ -12,6 +13,12 @@ const AlgorithmsChapter = Loadable({
   loader: () => import('../../src/components/contentChapters/AlgorithmsChapter'),
   loading: Loading,
 });
+
+const Challenges = Loadable({
+  loader: () => import('../../src/components/contentChapters/Challenges'),
+  loading: Loading,
+});
+
 
 const LayoutsChapter = Loadable({
   loader: () => import('../../src/components/contentChapters/LayoutsChapter'),
@@ -60,6 +67,12 @@ export default [
     path: '/algorithms',
     component: AlgorithmsChapter,
     routes: algorithmsRoutes,
+  },
+  {
+    name: 'Challenges',
+    path: '/challenges',
+    component: Challenges,
+    routes: challengesRoutes,
   },
   {
     name: 'Layouts',

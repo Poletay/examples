@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Menu from '../../Menu';
 import RoutesList from '../../RoutesList';
 
-const AlgorithmsChapter = ({ routes }) => (
-  <div className="chapter-challenges">
+const Challenges = ({ routes }) => (
+  <div className="chapter-algorithms">
     <div className="row">
       <div className="col-3">
         <Menu routes={routes} menuName='left-side-menu' menuType='flex-column' />
@@ -16,8 +16,8 @@ const AlgorithmsChapter = ({ routes }) => (
   </div>
 );
 
-AlgorithmsChapter.propTypes = {
+Challenges.propTypes = {
   routes: PropTypes.array,
 };
 
-export default AlgorithmsChapter;
+export default Challenges;
