@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Menu from '../../Menu';
 import RoutesList from '../../RoutesList';
 
+// Реализация учебных проектов из коллекции: https://github.com/florinpop17/app-ideas
+
 const Challenges = ({ routes }) => (
   <div className="chapter-algorithms">
     <div className="row">
