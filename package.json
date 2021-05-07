@@ -76,7 +76,7 @@
     "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
     "koa-webpack": "^5.1.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "popper.js": "^1.14.4",
     "prop-types": "^15.6.2",
     "pug": "^2.0.3",
