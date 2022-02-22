@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import connect from '../../../connect';
 
-const mapStateToProps = ({ algorithms }) => ({ algorithmsState: { ...algorithms } });
+const mapStateToProps = ({ algorithms }) => {
+  return { algorithmsState: { ...algorithms } };
+};
 
 const prettifyData = data => <pre>{JSON.stringify(data, null, ' ')}</pre>;
 

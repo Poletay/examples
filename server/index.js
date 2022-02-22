@@ -1,42 +1,49 @@
 import 'babel-polyfill';
-import 'babel-core/register';
+import '@babel/register';
 import path from 'path';
 import Koa from 'koa';
 import logger from 'koa-logger';
 import Pug from 'koa-pug';
 import Router from 'koa-router';
-import favicon from 'koa-favicon';
-import koaWebpack from 'koa-webpack';
+import koaStatic from 'koa-static';
+// import favicon from 'koa-favicon';
+// import koaWebpack from 'koa-webpack';
 import addRoutes from './routes';
 
 const app = new Koa();
 
-const hotClientConfig = {
-  hotClient: process.env.NODE_ENV === 'development' ? {} : false,
-};
+app.use(koaStatic(path.join(__dirname, 'app')));
 
-const router = new Router();
-const projectRoot = __dirname;
-const staticRoot = path.join(projectRoot, 'app');
+// const hotClientConfig = {
+  // hotClient: process.env.NODE_ENV === 'development' ? {} : false,
+// };
+
+// const projectRoot = __dirname;
+
+// const staticRoot = path.join(__dirname, 'app');
 
 const pug = new Pug({
-  viewPath: path.join(projectRoot, '../views'),
+  viewPath: path.resolve(__dirname, '../views'),
   debug: true,
   pretty: true,
   compileDebug: true,
-  basedir: path.join(projectRoot, 'views'),
+  // basedir: path.resolve(__dirname, '../views'),
+  // app: app,
 });
 
 pug.use(app);
+// koaWebpack(hotClientConfig)
+  // .then((middleware) => {
+    // app.use(middleware);
+  // });
+
+const router = new Router();
 addRoutes(router);
-koaWebpack(hotClientConfig)
-  .then((middleware) => {
-    app.use(middleware);
-  });
+
 app
-  .use(logger())
-  .use(favicon(path.join(staticRoot, 'img/favicon.png')))
-  .use(router.routes())
-  .use(router.allowedMethods());
+.use(logger())
+.use(async ctx => {
+    await ctx.render('index');
+});
 
 app.listen(3000);

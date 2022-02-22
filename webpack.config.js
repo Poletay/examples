@@ -1,23 +1,24 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   plugins: [
-    new CleanWebpackPlugin(['dist/app/js', 'dist/app/css']),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: './css/style.bundle.css',
     }),
-    new CopyWebpackPlugin([
-      {
-        from: './assets/images/**/*',
-        to: `${__dirname}/dist/app/img`,
-        flatten: true,
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './assets/images/**/*',
+          to: `${__dirname}/dist/app/img`,
+        },
+      ]
+    }),
   //  new BundleAnalyzerPlugin(),
   ],
   module: {
@@ -27,7 +28,9 @@ module.exports = {
         loader: 'babel-loader',
         exclude: path.resolve(__dirname, 'node_modules/'),
         options: {
-          presets: ['env', 'stage-0'],
+          plugins: [
+            '@babel/proposal-class-properties',
+          ]
         },
       },
       {

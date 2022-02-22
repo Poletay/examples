@@ -1,18 +1,9 @@
-import React from 'react';
-import Loadable from 'react-loadable';
-
-const Loading = () => <div>Loading...</div>;
-
-const Bin2Dec = Loadable({
-  loader: () => import('../../src/components/contentChapters/Challenges/Bin2Dec'),
-  loading: Loading,
-});
-
+import Bin2Dec from '../../src/components/contentChapters/Challenges/Bin2Dec/index';
 
 export default [
   {
     name: 'Bin2Dec',
-    path: '/challenges/bin2dec',
+    path: 'bin2dec',
     component: Bin2Dec,
   },
 ];

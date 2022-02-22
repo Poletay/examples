@@ -1,10 +1,35 @@
+import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import {
+  useLocation,
+  useNavigate,
+  useParams
+} from "react-router-dom";
 import * as actionCreators from './actions';
 
-export default mapStateToProps => Component => withRouter(
-  connect(
-    mapStateToProps,
-    actionCreators,
-  )(Component),
-);
+function withRouter(Component) {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    let navigate = useNavigate();
+    let params = useParams();
+    return (
+      <Component
+        {...props}
+        router={{ location, navigate, params }}
+      />
+    );
+  }
+
+  return ComponentWithRouterProp;
+}
+
+export default mapStateToProps => {
+  return Component => {
+    return withRouter(
+      connect(
+        mapStateToProps,
+        actionCreators,
+      )(Component),
+    );
+  };
+};

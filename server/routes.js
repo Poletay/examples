@@ -1,7 +1,7 @@
 export default router => router
-  .get('root', '/', (ctx) => {
-    ctx.render('index', { Title: 'Main page' });
+  .get('root', '/', async (ctx) => {
+    await ctx.render('index', { Title: 'Index Page'});
   })
-  .get('/users', (ctx) => {
-    ctx.render('index', { Title: 'Users' });
+  .get('/users', async (ctx) => {
+    await ctx.render('index');
   });

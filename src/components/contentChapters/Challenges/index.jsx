@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes } from "react-router-dom";
 import PropTypes from 'prop-types';
 import Menu from '../../Menu';
 import RoutesList from '../../RoutesList';
@@ -12,7 +13,9 @@ const Challenges = ({ routes }) => (
         <Menu routes={routes} menuName='left-side-menu' menuType='flex-column' />
       </div>
       <div className="col-9">
-        <RoutesList routes={routes} />
+        <Routes>
+          {RoutesList(routes)}
+        </Routes>
       </div>
     </div>
   </div>

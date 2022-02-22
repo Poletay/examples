@@ -7,10 +7,21 @@ const Menu = ({ routes, menuType, menuName }) => {
   const classNames = cn('nav', menuType, menuName);
   return (
     <ul className={classNames}>
-      {routes.map(({ path, name, exact }) => (
+      {routes.map(({ path, name }) => (
         <li className="nav-item" key={path}>
           {
-            <NavLink to={path} exact={exact} className="nav-link" activeClassName="active">{name}</NavLink>
+            <NavLink
+              to={path}
+              className={({ isActive }) => [
+                "nav-link",
+                isActive ? "active" : undefined
+              ]
+              .filter(Boolean)
+              .join(' ')
+            }
+            >
+              {name}
+            </NavLink>
           }
         </li>
       ))}
