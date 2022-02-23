@@ -1,5 +1,5 @@
 import React from 'react';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { shallow, configure } from 'enzyme';
 import Menu from '../src/components/Menu';
 
@@ -36,9 +36,9 @@ describe('Menu component tests', () => {
     it('MainMenu children count should be equal menuItems length', () => {
       expect(component.children().length).toBe(menuItems.length);
     });
-    it('MenuItems should take values from Array of Object', () => {
+    it('MenuItems should take values from Array of Objects', () => {
       component.children().forEach((node, itemIndex) => {
-        expect(node.find('.nav-link').childAt(0).text()).toBe(menuItems[itemIndex].name);
+        expect(node.find('.nav-item').childAt(0).text()).toBe(menuItems[itemIndex].name);
       });
     });
   });
